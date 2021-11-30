@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Marvin Hofer">
+    <title>Parser</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8="
+            crossorigin="anonymous"></script>
+</head>
+<style>
+.inline-div {
+    padding-left: 1%;
+    width: 49.5%;
+    height: 89.5%;
+    display: inline-block;
+    vertical-align: top;
+}
+.inline-txtarea {
+    height: 100%;
+    display: inline-block;
+    width: 100%;
+    border: 0px;
+    resize: none;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    white-space: pre;
+}
+.rdf-txtarea {
+    width: 100%;
+    height: 89%;
+    box-sizing: border-box;
+    resize: none;"
+}
+
+
+</style>
+<body>
+<h1>Parser</h1>
+<form action="report" method="post">
+    <textarea rows="35" class="rdf-txtarea" name="ntriples" maxlength="100000">
+&lt;Post&gt; &lt;NTriples&gt; &lt;Here&gt; .
+# If only one triple is provided, then a trailing newline/comment is required
+# to present a decent WARN/ERROR report (else result could be empty).
+    </textarea>
+    <button type="submit" style="width: 100%;">Submit</button>
+</form>
+</body>
+</html>
+
+
