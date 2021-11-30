@@ -1,5 +1,5 @@
-all: docker
+all: compile
 
-docker:
-	mvn spring-boot:build-image
+compile:
+	mvn clean compile scala:compile spring-boot:repackage
 

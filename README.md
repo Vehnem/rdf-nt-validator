@@ -1,13 +1,13 @@
-# remote-parse #
+# rdf-nt-validator
 
-## Build & Run ##
-
-```sh
-$ cd remote-parse
-$ sbt
-> jetty:start
-> browse
+## Build ##
+```
+make
 ```
 
-If `browse` doesn't launch your browser, manually open [http://localhost:8080/](http://localhost:8080/) in your browser.
-# rdf-nt-validator
+## Run ##
+```
+java -jar target/*.jar
+```
+
+# If `browse` doesn't launch your browser, manually open [http://localhost:8080/](http://localhost:8080/) in your browser.
