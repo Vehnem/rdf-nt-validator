@@ -47,6 +47,13 @@
             <version>2.6.0</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.apache.jena/jena-arq -->
+        <dependency>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>jena-arq</artifactId>
+            <version>4.3.0</version>
+        </dependency>
+
         <!--        <dependency>-->
 <!--            <groupId>com.typesafe.play</groupId>-->
 <!--            <artifactId>twirl-api_${scala.compat.version}</artifactId>-->
@@ -93,6 +100,10 @@
                 <exclusion>
                     <groupId>com.github.jsonld-java</groupId>
                     <artifactId>jsonld-java</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.apache.jena</groupId>
+                    <artifactId>jena-arq</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
