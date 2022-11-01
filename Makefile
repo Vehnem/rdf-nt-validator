@@ -1,5 +1,5 @@
 all: compile
 
 compile:
-	mvn clean compile scala:compile spring-boot:repackage
+	mvn clean compile scala:compile package spring-boot:repackage
 
