@@ -2,14 +2,15 @@ package de.v122
 
 import java.io.{ByteArrayInputStream, ByteArrayOutputStream}
 
-import com.nimbusds.jose.util.StandardCharset
-import de.v122.rdf.parser.NTParser
+import org.dbpedia.databus.derive.io.rdf.NTripleParser
+
 import javax.servlet.http.HttpServletRequest
 import org.apache.commons.io.IOUtils
 import org.springframework.stereotype.Controller
 import org.springframework.ui.Model
 import org.springframework.web.bind.annotation.{RequestMapping, RequestMethod, RequestParam}
 
+import java.nio.charset.StandardCharsets
 import scala.io.Source
 
 @Controller
@@ -25,12 +26,12 @@ class SparkRDFParser {
   def post(@RequestParam(name = "ntriples") ntriples: String, model: Model): String = {
 
 
-    val inputStream = new ByteArrayInputStream(ntriples.getBytes(StandardCharset.UTF_8))
+    val inputStream = new ByteArrayInputStream(ntriples.getBytes(StandardCharsets.UTF_8))
 
     val tripleOS = new ByteArrayOutputStream
     val reportOS = new ByteArrayOutputStream
 
-    NTParser.parse(inputStream, tripleOS, reportOS, removeWarnings = true)
+    NTripleParser.parse(inputStream, tripleOS, reportOS, removeWarnings = true)
 
     val validTriples = Source.fromBytes(tripleOS.toByteArray, "UTF-8").mkString
     println("validTriples", validTriples)

@@ -47,11 +47,10 @@
             <version>2.6.0</version>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/org.apache.jena/jena-arq -->
         <dependency>
-            <groupId>org.apache.jena</groupId>
-            <artifactId>jena-arq</artifactId>
-            <version>4.3.0</version>
+            <groupId>org.dbpedia.databus</groupId>
+            <artifactId>databus-derive-maven-plugin</artifactId>
+            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <!--        <dependency>-->
@@ -70,12 +69,12 @@
 <!--            <version>2.7.0-RC1</version>-->
 <!--            <scope>test</scope>-->
 <!--        </dependency>-->
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version>
-            <scope>runtime</scope>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>ch.qos.logback</groupId>-->
+<!--            <artifactId>logback-classic</artifactId>-->
+<!--            <version>1.2.3</version>-->
+<!--            <scope>runtime</scope>-->
+<!--        </dependency>-->
 <!--        <dependency>-->
 <!--            <groupId>javax.servlet</groupId>-->
 <!--            <artifactId>javax.servlet-api</artifactId>-->
@@ -87,11 +86,11 @@
             <artifactId>fs2-io_${scala.compat.version}</artifactId>
             <version>1.0.0</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.apache.jena</groupId>-->
-<!--            <artifactId>jena-arq</artifactId>-->
-<!--            <version>3.13.1</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.jena</groupId>
+            <artifactId>jena-arq</artifactId>
+            <version>4.3.0</version>
+        </dependency>
         <dependency>
             <groupId>net.sansa-stack</groupId>
             <artifactId>sansa-rdf-spark_${scala.compat.version}</artifactId>
